@@ -22,9 +22,9 @@ func douuid(w http.ResponseWriter, r *http.Request) {
 func handleRequests() {
 
 	myRouter := mux.NewRouter().StrictSlash(true)
-	myRouter.HandleFunc("/", base)
-	myRouter.HandleFunc("/hi", hi)
-	myRouter.HandleFunc("/douuid", douuid)
+	myRouter.HandleFunc("/", base).Methods("GET")
+	myRouter.HandleFunc("/hi", hi).Methods("GET")
+	myRouter.HandleFunc("/douuid", douuid).Methods("GET")
 	log.Fatal(http.ListenAndServe(":8081", myRouter))
 }
 func main() {
