@@ -28,22 +28,6 @@ func handleRequests() {
 	log.Fatal(http.ListenAndServe(":8081", myRouter))
 }
 func main() {
-
-	/*
-		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
-		})
-
-		http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request) {
-			fmt.Fprintf(w, "Hi")
-		})
-
-		http.HandleFunc("/uuid", func(w http.ResponseWriter, r *http.Request) {
-			fmt.Fprintf(w, uuid.New())
-		})
-	*/
-	//log.Fatal(http.ListenAndServe(":8081", nil))
-	//lets make some more updates
 	fmt.Println("Rest API v2.0 - Mux Routers")
 	handleRequests()
 }
