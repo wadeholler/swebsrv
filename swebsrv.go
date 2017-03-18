@@ -20,7 +20,6 @@ func douuid(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleRequests() {
-
 	myRouter := mux.NewRouter().StrictSlash(true)
 	myRouter.HandleFunc("/", base).Methods("GET")
 	myRouter.HandleFunc("/hi", hi).Methods("GET")
